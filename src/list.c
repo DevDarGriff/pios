@@ -55,7 +55,3 @@
 	free(current);
     }
 
-
-
-//or does this need its own main method? or does it use kernel_main.c's main?
-

@@ -8,5 +8,3 @@ struct list_element {
 }
 
 
-
-//does it need it's own main method?
