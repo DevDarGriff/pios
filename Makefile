@@ -17,7 +17,6 @@ OBJS = \
 	kernel_main.o \
 
 
-
 OBJ = $(patsubst %,$(ODIR)/%,$(OBJS))
 
 $(ODIR)/%.o: $(SDIR)/%.c
