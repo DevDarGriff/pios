@@ -1,7 +1,7 @@
-#include <stdio.h>
-#include "rprintf.c"
-#include "serial.c"
-//#include "rprintf.h"
+//#include <stdio.h>
+//#include "rprintf.c"
+#include "serial.h"
+#include "rprintf.h"
 
 	//method to retrieve pi's clock counter
 unsigned long get_timer_count() {
@@ -42,13 +42,14 @@ unsigned int getEl() {
 
 void print_current_El() {
     el = getEl();
-    esp_printf(putc, "Current Execution Level is: %d\r\n", el);	//, ,el
+    esp_printf(putc, "Current Execution Level is: %d\r\n", el);
 }
 
 
 char glbl[128];
 
 void kernel_main() {
+
 
 
 	//retrieve current Execution Level, print EL to terminal
@@ -79,10 +80,6 @@ void kernel_main() {
     struct list_element *head = &a;
 */
 
-/*
-	//retrieve current Execution Level, print EL to terminal
-    print_current_El();
-*/
     while(1){
     }
 }
