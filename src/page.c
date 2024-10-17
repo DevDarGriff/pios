@@ -2,10 +2,7 @@
 #include <stdint.h>
 #include <stddef.h>
 
-
-//double check what libraries are needed?
-
-
+#include "page.h"
 
     struct ppage physical_page_array[128];    //128 pages, each 2mb in length. covers 256 megs of mem
     struct ppage *free_list_head = NULL;
@@ -38,7 +35,7 @@
       for (unsigned int i = 0; i < npages; i++) {
         if (current == NULL) {
 	  if(allocd_list != NULL) {
-	    free_allocated_pages(allocd_list);
+	    free_physical_pages(allocd_list);
 	  }
           return NULL;
         }

@@ -1,7 +1,9 @@
-//#include <stdio.h>
-//#include "rprintf.c"
+
 #include "serial.h"
 #include "rprintf.h"
+#include "mmu.h"
+
+
 
 	//method to retrieve pi's clock counter
 unsigned long get_timer_count() {
@@ -48,7 +50,17 @@ void print_current_El() {
 
 char glbl[128];
 
+		//KERNEL_MAIN MAIN METHOD
+
 void kernel_main() {
+
+
+//    mapPages(0x3f50040, 0x200000);
+
+
+//    int pageTable = 0;
+
+//    pageTable = loadPageTable(struct table_descriptor_stage1 *L1table);
 
 
 

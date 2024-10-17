@@ -18,6 +18,8 @@ OBJS = \
 	rprintf.o \
 	serial.o \
 	page.o \
+	mmusetup.o \
+
 
 OBJ = $(patsubst %,$(ODIR)/%,$(OBJS))
 
